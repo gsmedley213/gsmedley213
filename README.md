@@ -1,16 +1,39 @@
-## Hi there 👋
+## 📚 Project Gutenberg Annotation Pipeline
 
-<!--
-**gsmedley213/gsmedley213** is a ✨ _special_ ✨ repository because its `README.md` (this file) appears on your GitHub profile.
+I’ve developed a three-stage pipeline that uses a Large Language Model (LLM) to generate and deliver annotations for public domain books from Project Gutenberg.  
+The pipeline is modular, open source, and designed for extensibility.
 
-Here are some ideas to get you started:
+---
 
-- 🔭 I’m currently working on ...
-- 🌱 I’m currently learning ...
-- 👯 I’m looking to collaborate on ...
-- 🤔 I’m looking for help with ...
-- 💬 Ask me about ...
-- 📫 How to reach me: ...
-- 😄 Pronouns: ...
-- ⚡ Fun fact: ...
--->
+### 🔗 The Pipeline at a Glance
+
+1. **Content Extraction**  
+   [`content-extractor`](https://github.com/gsmedley213/content-extractor)  
+   Extracts content from Project Gutenberg HTML and saves a new HTML file with elements marked to associate them with extracted content.
+   
+3. **LLM Annotation**  
+   [`llm-annotate`](https://github.com/gsmedley213/llm-annotate)  
+   Uses an LLM (Google Gemini) to generate notes on book content, outputting to JSON.
+
+4. **HTML Annotation Synthesis**  
+   [`html-annotate`](https://github.com/gsmedley213/html-annotate)  
+   Combines the marked HTML and the generated notes to produce a new file with notes presented like tooltips.
+
+---
+
+### 🛠️ Technologies Used
+
+- Java 21+
+- Spring Boot
+- Gradle
+- Google Gemini API
+
+---
+
+### 🚀 Try It Out
+
+Each repository has a detailed README with setup instructions and usage examples.  
+
+- [content-extractor](https://github.com/gsmedley213/content-extractor)
+- [llm-annotate](https://github.com/gsmedley213/llm-annotate)
+- [html-annotate](https://github.com/gsmedley213/html-annotate)
