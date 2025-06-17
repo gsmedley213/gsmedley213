@@ -1,7 +1,6 @@
 ## 📚 Project Gutenberg Annotation Pipeline
 
-I’ve developed a three-stage pipeline that uses a Large Language Model (LLM) to generate and deliver annotations for public domain books from Project Gutenberg.  
-The pipeline is modular, open source, and designed for extensibility.
+I’ve developed a three-stage pipeline that uses a Large Language Model (LLM) to generate tooltip-like annotations for public domain books from Project Gutenberg.
 
 ---
 
@@ -9,7 +8,7 @@ The pipeline is modular, open source, and designed for extensibility.
 
 1. **Content Extraction**  
    [`content-extractor`](https://github.com/gsmedley213/content-extractor)  
-   Extracts content from Project Gutenberg HTML and saves a new HTML file with elements marked to associate them with extracted content.
+   Extracts content from a Project Gutenberg HTML eBook and saves a new HTML file with elements marked to associate them with extracted content.
    
 3. **LLM Annotation**  
    [`llm-annotate`](https://github.com/gsmedley213/llm-annotate)  
