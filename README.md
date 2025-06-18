@@ -20,6 +20,25 @@ I’ve developed a three-stage pipeline that uses a Large Language Model (LLM) t
 
 ---
 
+## Design Rationale
+
+This project currently uses a file-based approach for communication between services. This method was chosen for simplicity and ease of local development and testing. Having direct access to the input and output files makes it easier to see what is happening. You can also diff files from different runs, or from different stages of the same run, to check that changes have the desired effects.
+
+---
+
+## Future Plans
+
+I plan to evolve this project by:
+- Migrating the inter-service communication to cloud-based messaging and storage solutions (e.g., AWS S3, Azure Blob, or Pub/Sub).
+- Deploying each service as a containerized microservice.
+- Adding a fourth webservice that allows users to directly start the pipeline by providing a Project Gutenberg link, eliminating the need to manually download and extract files.
+
+The file-based approach will remain supported for local development, testing, and learning purposes.
+
+Additional future plans for the specific services are outlined in their README files.
+
+---
+
 ### 🛠️ Technologies Used
 
 - Java 21+
